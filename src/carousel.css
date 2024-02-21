@@ -1,0 +1,20 @@
+.carousel-container {
+    position: relative;
+  }
+  
+  .alice-carousel__prev-btn-wrapper,
+  .alice-carousel__next-btn-wrapper {
+    position: relative;
+    margin-top: 0%;
+    margin-left: 0%;
+  }
+  
+  .alice-carousel__prev-btn-wrapper {
+   
+    right:  50% ; 
+  }
+  
+  .alice-carousel__next-btn-wrapper {
+    right: 0;
+  }
+  
