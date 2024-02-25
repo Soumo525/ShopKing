@@ -16,7 +16,7 @@ function CardTes() {
     getPostTshirt();
     imageListTshirt();
   }, []);
-  const isMobile = useMediaQuery({ maxWidth: 360 });
+  const isMobile = useMediaQuery({ maxWidth: 360 && 480 });
   // console.log("Is Mobile?", isMobile);
   const responsive = {
     0: { items: 1 },
@@ -48,6 +48,7 @@ function CardTes() {
                     if (img.$id === post.imagekey) {
                       return (
                         <div
+                          onClick={() => handleView(post)}
                           key={i}
                           className="aspect-w-16 aspect-h-9"
                         >

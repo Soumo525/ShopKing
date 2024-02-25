@@ -8,7 +8,7 @@ function Tshirt() {
     // const bucketIdsArray = conf.appwriteBucketId.split(",").map((id) => id.trim());
     // const secondBucketId = bucketIdsArray[1]; 
     const { user,imageListTshirt,imageTshirt,showPostTshirt,getPostTshirt,logoutUser,deleteTshirtPost,deleteTshirtImage } = useAuth();
-    const isMobile = useMediaQuery({ maxWidth: 412 && 460  });
+    const isMobile = useMediaQuery({ maxWidth: 360 && 480  });
     const navigate = useNavigate();
     const handleTshirt = () => {
         navigate( "/catalog/tshirts");
@@ -75,7 +75,8 @@ function Tshirt() {
                 imageTshirt.map((img,i) => {
                 if (img.$id === post.imagekey) {
                   return (
-                    <div key={i} className="aspect-w-16 aspect-h-9">
+                    <div onClick={() => handleView(post)}
+                    key={i} className="aspect-w-16 aspect-h-9">
                       <img
                         src={storage.getFilePreview(conf.appwriteBucketId_2, img.$id)}
                         alt="Product"

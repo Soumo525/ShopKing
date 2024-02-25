@@ -28,7 +28,7 @@ function Card() {
     }
   }, [postNew, shouldScrollTop]);
 
-  const isMobile = useMediaQuery({ maxWidth: 360 }); // Determine if viewport is in mobile view
+  const isMobile = useMediaQuery({ maxWidth: 360 && 480}); // Determine if viewport is in mobile view
 
   const responsive = {
     0: { items: 1 },
@@ -60,6 +60,7 @@ function Card() {
                     if (img.$id === post.imagekey) {
                       return (
                         <div
+                          onClick={() => handleView(post)}
                           key={i}
                           className="aspect-w-16 aspect-h-9"
                         >

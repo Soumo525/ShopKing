@@ -8,7 +8,7 @@ function ShowMobile() {
   // const bucketIdsArray = conf.appwriteBucketId.split(",").map((id) => id.trim());
   // const firstBucketId = bucketIdsArray[0];
   const { getPost, postNew, imgListNew, imageList } = useAuth();
-  const isMobile = useMediaQuery({ maxWidth: 360 });
+  const isMobile = useMediaQuery({ maxWidth: 360 && 480 });
   const navigateItem = useNavigate()
   const navigate = useNavigate()
   useEffect(() => { // Adding useEffect
@@ -33,7 +33,10 @@ function ShowMobile() {
                 imgListNew.map((img,i) => {
                   if (img.$id === post.imagekey) {
                     return (
-                      <div key={i} className="aspect-w-16 aspect-h-9">
+                      <div 
+                        onClick={() => handleView(post)}
+                        key={i} 
+                        className="aspect-w-16 aspect-h-9">
                         <img
                           src={storage.getFilePreview(conf.appwriteBucketId_1, img.$id)}
                           alt="Product"

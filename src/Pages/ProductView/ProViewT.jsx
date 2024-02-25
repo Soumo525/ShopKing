@@ -7,7 +7,7 @@ function ProViewT() {
   const location = useLocation();
   const { product } = location.state;
  //console.log(product);
-  const isMobile = useMediaQuery({ maxWidth: 360 });
+  const isMobile = useMediaQuery({ maxWidth: 360 && 480});
   if (!product) {
     return <div>Product not found</div>;
   }

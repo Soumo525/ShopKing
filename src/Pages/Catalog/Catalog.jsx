@@ -3,7 +3,7 @@ import MobileCat from "./MobileCat";
 import { useMediaQuery } from "react-responsive";
 import { useNavigate } from 'react-router';
 function Catalog() {
-  const isMobile = useMediaQuery({ maxWidth: 412 && 460  });
+  const isMobile = useMediaQuery({ maxWidth: 360 && 480  });
   const navigate = useNavigate();
   const handleTshirt = () => {
     navigate( "/catalog/tshirts");

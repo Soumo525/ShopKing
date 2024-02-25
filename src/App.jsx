@@ -21,6 +21,7 @@ import PrivacyPolicy from "./Pages/Policy/PrivacyPolicy";
 import Terms from "./Pages/Policy/Terms";
 import Return from "./Pages/Policy/Return";
 import Contact from "./Pages/Contact/Contact";
+import Cart from "./Pages/Cart/Cart";
 function App() {
   return (
     <Router>
@@ -44,6 +45,7 @@ function App() {
             <Route path="/terms" element = {<Terms />} />
             <Route path="/return" element = {<Return />} />
             <Route path="/contact" element = {<Contact/>} />
+            <Route path="/cart" element = {<Cart /> } />
           </Route>
         </Routes>
       </AuthProvider>
