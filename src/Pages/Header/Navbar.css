@@ -1,12 +1,9 @@
-/* .active{
-    background-color: #1d4ed8;
-} */
-
+/* Navbar.css */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0f172a;
+    background-color: #fbfbfb;
     color: white;
     top: 0;
 }
@@ -16,50 +13,54 @@ nav .title {
     margin: 1rem;
     font-weight: bold;
     text-decoration: none;
-    color: white;
+    color: #02b9b9;
+    /* color: #000000; */
 }
 
 nav ul {
     display: flex;
+    
 }
 
 nav ul li {
    list-style: none; 
+
 }
 
 nav ul li a {
     display: block;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 0.5rem;
     margin: 0 0.5rem;
     border-radius: 0.5rem;
-}
-
-nav ul li a:not(.active):hover {
-    background-color:#172554 ;
+  
 }
 
 nav .menu {
     display: none;
     position: absolute;
-    top: 0.75rem;
+    top: 1.5rem;
     right: 0.5rem;
     flex-direction: column;
     justify-content: space-between;
-    width: 2.25rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1rem;
 }
 
 nav .menu span {
-    height: 0.4rem;
+    height: 0.1rem;
     width: 100%;
-    background-color: #fff;
-    border-radius: 0.2rem;
+    background-color: #000000;
+    border-radius: 0.1rem;
     display:  inline-block;
 }
-
-
+nav .cart {
+    margin-top: 0%;
+    position: relative;
+    color: #000000;
+    right: 6%;
+}
 @media (max-width: 480px) {
     nav .menu {
         display: flex;
@@ -72,6 +73,10 @@ nav .menu span {
         align-items: flex-start;
     }
 
+    nav .title {
+        margin: 1rem auto; /* Center the title text */
+    }
+
     nav ul {
         display: none;
         flex-direction: column;
@@ -81,6 +86,7 @@ nav .menu span {
 
     nav ul.open {
         display: flex;
+        background-color: #f6f6f6;
     }
 
     nav ul li {
@@ -91,5 +97,55 @@ nav .menu span {
     nav ul li a {
         margin: 0.2rem 0.5rem;
     }
-   
+
+    nav .cart {
+        margin-top: 6.2%;
+        position: absolute;
+        left: 70%;
+    }
+}
+
+@media (max-width: 360px) {
+    nav .menu {
+        display: flex;
+        margin-right: 40px;
+        margin-top: 38px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .title {
+        margin: 1rem ;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+
+    nav ul.open {
+        display: flex;
+        background-color: #f6f6f6;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        margin: 0.2rem 0.5rem;
+        
+    }
+
+    nav .cart {
+        margin-top: 7.6%;
+        position: absolute;
+        left: 70%;
+    }
 }

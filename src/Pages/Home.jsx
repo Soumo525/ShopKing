@@ -13,6 +13,7 @@ export default function Home() {
         <>
             <div className="mx-auto w-full max-w-7xl">
                 <Banner />
+                <br/>
                 <ButtonMove />
                 <div className="py-4">
                     <p className="text-3xl font-black text-gray-900 dark:text-white">Mobile Cover</p>
