@@ -22,6 +22,7 @@ import Terms from "./Pages/Policy/Terms";
 import Return from "./Pages/Policy/Return";
 import Contact from "./Pages/Contact/Contact";
 import Cart from "./Pages/Cart/Cart";
+import Cartt from "./Pages/Cart/Cartt";
 function App() {
   return (
     <Router>
@@ -46,6 +47,7 @@ function App() {
             <Route path="/return" element = {<Return />} />
             <Route path="/contact" element = {<Contact/>} />
             <Route path="/cart" element = {<Cart /> } />
+            <Route path="/cartt" element = {<Cartt />} />
           </Route>
         </Routes>
       </AuthProvider>
