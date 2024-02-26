@@ -7,7 +7,7 @@ import 'react-whatsapp-widget/dist/index.css';
 import { useNavigate } from 'react-router';
 import { WhatsAppWidget } from 'react-whatsapp-widget';
 import 'react-whatsapp-widget/dist/index.css';
-function ProView() {
+function ProViewT() {
   const location = useLocation();
   const { product } = location.state;
   const isMobile = useMediaQuery({ maxWidth: 360 && 460});
@@ -36,7 +36,8 @@ function ProView() {
   };
 
   const handleAddToCart = () => {
-    navigate("/cartt", { state: { product, quantity: num } });
+    navigate("/cartt", { state: { product, quantity: num,} });
+    window.scrollTo(0, 0);
   }
 
   return (
@@ -101,4 +102,4 @@ function ProView() {
   );
 }
 
-export default ProView;
+export default ProViewT;

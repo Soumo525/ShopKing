@@ -37,6 +37,7 @@ function ProView() {
 
   const handleAddToCart = () => {
     navigate("/cart", { state: { product, quantity: num } });
+    window.scrollTo(0, 0);
   }
 
   return (

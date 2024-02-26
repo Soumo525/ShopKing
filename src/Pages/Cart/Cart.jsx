@@ -57,9 +57,10 @@ function Cart() {
           <div className="mt-8">
             <ul className="space-y-4">
               {cartItems.map((cartItem, index) => (
+              
                 <li key={index} className="flex items-center gap-4">
                   <img
-                    src={storage.getFilePreview(conf.appwriteBucketId_1, cartItem.product.imagekey)}
+                   src={storage.getFilePreview(conf.appwriteBucketId_1, cartItem.product.imagekey)}
                     alt=""
                     className="size-16 rounded object-cover"
                   />
